@@ -47,6 +47,12 @@ const TEAM: TeamMember[] = [
 
 const PROJECTS: ProjectInfo[] = [
   {
+    title: 'Bias-Meter-Prototype',
+    skills: ['javascript', 'nodejs', 'chrome', 'python', 'fastapi'],
+    desc: 'A browser extension and backend service designed to analyze YouTube video transcripts in real-time for potential bias, providing users with political and historical context.',
+    img: 'https://github.com/MarvelousChester/Bias-Meter-Prototype/raw/main/imgs/CenterBiasDetection.png',
+  },
+  {
     title: 'NEURAL_DASH V2',
     skills: ['typescript', 'react', 'nodejs', 'mongodb'],
     desc: 'Real-time biometric data analysis engine built for high-performance cognitive monitoring systems.',
