@@ -18,3 +18,18 @@ View your app in AI Studio: https://ai.studio/apps/ebbb668b-cef8-4da1-8ee0-39685
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Deploy to GitHub Pages
+
+This repository is configured to deploy automatically to GitHub Pages from the `main` branch using GitHub Actions.
+
+### One-time repository setup
+
+1. Go to **Settings → Pages** in this repository.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+
+### Deployment flow
+
+- Pushing to `main` triggers `.github/workflows/deploy-pages.yml`.
+- The workflow installs dependencies, builds with Vite, uploads `dist`, and deploys to Pages.
+- Site URL format: `https://<your-user>.github.io/CapstonePortofoliosQR/`
