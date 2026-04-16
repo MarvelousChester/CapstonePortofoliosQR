@@ -1,12 +1,11 @@
 import { motion } from 'motion/react';
-import { LucideIcon } from 'lucide-react';
+import { Globe } from 'lucide-react';
 
 export interface TeamMember {
   name: string;
   role: string;
   desc: string;
   img: string;
-  icon: LucideIcon;
 }
 
 interface TeamCardProps {
@@ -16,8 +15,6 @@ interface TeamCardProps {
 }
 
 export function TeamCard({ member, index, onShowProjects }: TeamCardProps) {
-  const Icon = member.icon;
-  
   return (
     <motion.article 
       initial={{ opacity: 0, y: 30 }}
@@ -54,7 +51,7 @@ export function TeamCard({ member, index, onShowProjects }: TeamCardProps) {
             </a>
             <a href="#" title="Personal Portfolio" className="flex items-center gap-3 group hover:opacity-100 transition-all">
               <div className="w-[36px] h-[36px] flex items-center justify-center rounded-[10px] bg-white/5 group-hover:bg-white/15 border border-white/[0.12] group-hover:border-white/30 transition-all transform group-hover:-translate-y-1 text-white/80 group-hover:text-white flex-shrink-0">
-                <Icon size={16} />
+                <Globe size={16} />
               </div>
               <span className="text-white/60 group-hover:text-white transition-colors text-[11px] uppercase tracking-[1px] font-medium whitespace-nowrap">
                 Personal Portfolio

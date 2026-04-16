@@ -14,28 +14,24 @@ const TEAM: TeamMember[] = [
     role: 'Lead Architect & Strategy',
     desc: 'Pioneering spatial computing interfaces and distributed systems for the next generation of creative tools.',
     img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDEcaFdEaacBLwFM3QTdAZI4s3eMtw4oul9eRxArYmI0YwRHL1ZUYcAKUUUznsO3hYYUroFgg7V1v0y4DK0q4XossaPZ13m5XsrKGh8XjwsOIFfZ4IfVLmzWjwHDzh58W4AhgHYxStKsqQawCtQ_mTF5v2bx2kW6S2e26LTmMs7hjJOmqjOq9Zu5Zhq8AJlsnCvz0xC9TSdgbTZxKY8bBuoEi6k9jUMR5ncZnITuOoqQJG08pXJt2rfAL1iyQ0fhLfJxnqW0M1zyg',
-    icon: Share2,
   },
   {
     name: 'MAYA CHEN',
     role: 'Visual Experience Director',
     desc: 'Crafting immersive brand narratives through motion design and cinematic digital experiences.',
     img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDLO-4P3sl_kxtpzzoWyzQbGBmIOuorDUxU8YxFmyLsjCwfo-pwQdKskkSRY6xiOgxRNefnVHDdu6IXDv1LhQon4v4cSXrWyv3wnJvGA-lF5t5NSAqgykHbvUvNVoliv9ubktOEd9VBDoSxHm5FeaSowvMuXF8HNk6c1N8vTqRVrzlOpJow2RBXB1xfqEZklH9cELfFQ3akft1JY-88wzpU6yDDOY_nEezr4ehOvkjEFwaxscGRl9QHY4p0Xb4_qN8nG3c9lK_lpQ',
-    icon: Palette,
   },
   {
     name: 'JORDAN VANCE',
     role: 'Full-Stack Engineer',
     desc: 'Expert in scalable cloud infrastructures and high-performance real-time data visualization.',
     img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAUP0p3TjfHuZ40es03JivHvu8Wp6Q6C0yNoGpevtdeoMZLk2IjoCF6Nwq1O5njB6i1O5cX7TJ9sNY4of7ywSilqAzMYvHTYfAsI431svaLByOyARAFQZiog9-80U9jRpGRd66YfW-4XKrEehfza8h6Tu6A7lIBryYby7AJYy1mZSPVKNOzi-imLGpq4xcppVPpI8wsOoRaIceE4ZVpN7t--fhtUZGPJC-GmNnq0ByKRnDlDOAnBXqZxZQ-L0k21V14VQc7w07_Fw',
-    icon: Terminal,
   },
   {
     name: 'ELENA MORITZ',
     role: 'Principal Product Lead',
     desc: 'Bridging human behavior and machine intelligence through elegant, intuitive interface design.',
     img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDit5wCjrhePtIRmA-68GrWUiWOwi0brd7A2-yqU8u7JvYud7PGWNAaJdsi0cYT3GKVyWEMsJdBHFYjVM9faHGw3QpsAYvIuIk0oaN3G0Cg5rQNGoRODDPhbrUJ401aEjC8JGIWHtAHRhPKyl-yP6rO2drvf69VuOWCt5wvHNAwKOcrE7uZfISSJiO74wD26j5ZXT08npZ9wZ0RGmkhCPdVTb6_xMLUtZG1an8wreB0x_RO1fGcpuFP14yOu0fEXzdAdeVyWx90gA',
-    icon: Users,
   }
 ];
 
@@ -120,8 +116,8 @@ export default function App() {
           >
             <Hero 
               label="Our Visionaries"
-              title={<>The Creative <br className="lg:hidden" />Engine</>}
-              description="A specialized team of four high-caliber individuals redefining digital boundaries through code and cinematic design."
+              title={<>Team behind <br className="lg:hidden" />Augi</>}
+              description="Your Fixing Companion"
             />
 
             <div className="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-4 gap-10 lg:gap-8">

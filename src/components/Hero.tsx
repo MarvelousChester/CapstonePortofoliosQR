@@ -24,14 +24,14 @@ export const Hero = ({ label, title, description, labelClassName = "text-white/6
           {title}
         </h2>
       </motion.div>
-      <motion.p 
+      <motion.h3 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
-        className="text-white/60 text-[14px] leading-relaxed max-w-[280px] lg:max-w-md mt-6 lg:mx-auto"
+        className="text-white/70 text-[18px] lg:text-[22px] font-[300] tracking-[1px] mt-6 lg:mx-auto uppercase"
       >
         {description}
-      </motion.p>
+      </motion.h3>
     </section>
   );
 };
