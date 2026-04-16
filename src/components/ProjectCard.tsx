@@ -7,6 +7,7 @@ export interface ProjectInfo {
   skills: string[];
   desc: string;
   img: string;
+  github?: string;
 }
 
 interface ProjectCardProps {
@@ -44,9 +45,20 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </p>
         </div>
         
-        <button className="w-full mt-8 bg-accent-blue text-white text-[13px] font-medium py-4 rounded-[16px] uppercase tracking-[1px] border border-transparent shadow-[0_0_15px_rgba(79,168,255,0.2)] hover:bg-accent-blue/90 hover:shadow-[0_0_20px_rgba(79,168,255,0.4)] active:scale-[0.98] transition-all outline-none">
-          View on GitHub
-        </button>
+        {project.github ? (
+          <a 
+            href={project.github} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-full mt-8 bg-accent-blue text-white text-[13px] font-medium py-4 rounded-[16px] uppercase tracking-[1px] border border-transparent shadow-[0_0_15px_rgba(79,168,255,0.2)] hover:bg-accent-blue/90 hover:shadow-[0_0_20px_rgba(79,168,255,0.4)] active:scale-[0.98] transition-all outline-none flex items-center justify-center"
+          >
+            View on GitHub
+          </a>
+        ) : (
+          <button className="w-full mt-8 bg-white/5 text-white/40 text-[13px] font-medium py-4 rounded-[16px] uppercase tracking-[1px] border border-white/10 cursor-not-allowed">
+            Source Private
+          </button>
+        )}
       </div>
     </motion.article>
   );
