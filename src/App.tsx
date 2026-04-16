@@ -11,7 +11,7 @@ import { InnovationLab } from './components/InnovationLab';
 const TEAM: TeamMember[] = [
   {
     name: 'Karandeep Sandhu',
-    role: 'Lead Architect & Strategy',
+    role: 'Software Engineer',
     desc: 'Pioneering spatial computing interfaces and distributed systems for the next generation of creative tools.',
     img: '/Karandeep.png',
     linkedin: 'https://www.linkedin.com/in/karandeep-sandhu/',
@@ -19,7 +19,7 @@ const TEAM: TeamMember[] = [
   },
   {
     name: 'Jasmine Kaur',
-    role: 'Visual Experience Director',
+    role: 'Software Engineer',
     desc: 'Crafting immersive brand narratives through motion design and cinematic digital experiences.',
     img: '/Jasmine.png',
     linkedin: 'https://www.linkedin.com/in/jasminekaur1707/',
@@ -29,7 +29,7 @@ const TEAM: TeamMember[] = [
   {
     name: 'Andrei Haboc',
 
-    role: 'Full-Stack Engineer',
+    role: 'Software Engineer',
     desc: 'Expert in scalable cloud infrastructures and high-performance real-time data visualization.',
     img: 'https://github.com/andreipogi2727.png',
     linkedin: 'https://www.linkedin.com/in/andrei-haboc-7b8583291/',
@@ -37,7 +37,7 @@ const TEAM: TeamMember[] = [
   },
   {
     name: 'Salman Nouman',
-    role: 'Principal Product Lead',
+    role: 'Software Engineer',
     desc: 'Bridging human behavior and machine intelligence through elegant, intuitive interface design.',
     img: 'https://github.com/SalmanNouman.png',
     linkedin: 'https://www.linkedin.com/in/salmannouman/',
