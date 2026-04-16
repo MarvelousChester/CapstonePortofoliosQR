@@ -1,0 +1,36 @@
+import { motion } from 'motion/react';
+import { ProjectCard, ProjectInfo } from './ProjectCard';
+import { Hero } from './Hero';
+import { CTASection } from './CTASection';
+
+interface InnovationLabProps {
+  projects: ProjectInfo[];
+}
+
+export const InnovationLab = ({ projects }: InnovationLabProps) => {
+  return (
+    <motion.main 
+      key="projects"
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -20 }}
+      transition={{ duration: 0.4 }}
+      className="flex-1 pt-12 pb-40 px-6 max-w-sm md:max-w-7xl mx-auto relative z-10 w-full"
+    >
+      <Hero 
+        label="ARCHIVE V.04"
+        labelClassName="text-accent-blue font-bold"
+        title={<>Innovation <br className="lg:hidden" /><span className="text-accent-blue font-medium">Lab</span></>}
+        description="A curated showcase of experimental prototypes, open-source utilities, and architectural blueprints developed by the collective."
+      />
+
+      <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-2 gap-10 lg:gap-8">
+        {projects.map((project, i) => (
+          <ProjectCard key={project.title} project={project} index={i} />
+        ))}
+      </div>
+
+      <CTASection />
+    </motion.main>
+  );
+};

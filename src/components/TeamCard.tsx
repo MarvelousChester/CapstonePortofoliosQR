@@ -12,9 +12,10 @@ export interface TeamMember {
 interface TeamCardProps {
   member: TeamMember;
   index: number;
+  onShowProjects?: () => void;
 }
 
-export function TeamCard({ member, index }: TeamCardProps) {
+export function TeamCard({ member, index, onShowProjects }: TeamCardProps) {
   const Icon = member.icon;
   
   return (
@@ -62,7 +63,10 @@ export function TeamCard({ member, index }: TeamCardProps) {
           </div>
         </div>
         
-        <button className="w-full mt-6 lg:mt-8 bg-white/[0.04] text-white/90 text-[13px] font-medium py-4 rounded-[16px] uppercase tracking-[1px] border border-white/[0.12] hover:bg-white/10 active:bg-white/5 transition-all outline-none">
+        <button 
+          onClick={onShowProjects}
+          className="w-full mt-6 lg:mt-8 bg-white/[0.04] text-white/90 text-[13px] font-medium py-4 rounded-[16px] uppercase tracking-[1px] border border-white/[0.12] hover:bg-white/10 active:bg-white/5 transition-all outline-none"
+        >
           Show Other Projects
         </button>
       </div>

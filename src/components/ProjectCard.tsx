@@ -1,12 +1,11 @@
 import { motion } from 'motion/react';
 import { LucideIcon } from 'lucide-react';
+import { SkillIcons } from './SkillIcons';
 
 export interface ProjectInfo {
   title: string;
-  icons: LucideIcon[];
+  skills: string[];
   desc: string;
-  linkText: string;
-  linkIcon: LucideIcon;
   img: string;
 }
 
@@ -37,25 +36,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <div>
             <h3 className="text-2xl font-medium text-white tracking-tight uppercase">{project.title}</h3>
             
-            <div className="flex items-center gap-4 mt-3 text-accent-blue">
-              {project.icons.map((ProjectIcon, idx) => (
-                <ProjectIcon key={idx} size={20} strokeWidth={2.5} />
-              ))}
-            </div>
+            <SkillIcons skills={project.skills} />
           </div>
           
           <p className="text-white/60 text-[14px] leading-relaxed mt-4">
             {project.desc}
           </p>
-          
-          <div className="flex items-center gap-3 pt-4">
-            <a href="#" className="w-[36px] h-[36px] flex items-center justify-center rounded-[10px] bg-white/5 hover:bg-white/15 border border-white/[0.12] hover:border-white/30 transition-all transform hover:-translate-y-1 text-white/80 hover:text-white flex-shrink-0">
-              <project.linkIcon size={16} />
-            </a>
-            <span className="text-white/60 text-[11px] uppercase tracking-[1px] font-medium whitespace-nowrap">
-              {project.linkText}
-            </span>
-          </div>
         </div>
         
         <button className="w-full mt-8 bg-accent-blue text-white text-[13px] font-medium py-4 rounded-[16px] uppercase tracking-[1px] border border-transparent shadow-[0_0_15px_rgba(79,168,255,0.2)] hover:bg-accent-blue/90 hover:shadow-[0_0_20px_rgba(79,168,255,0.4)] active:scale-[0.98] transition-all outline-none">
