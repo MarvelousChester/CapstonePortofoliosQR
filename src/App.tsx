@@ -63,12 +63,27 @@ const PROJECTS: ProjectInfo[] = [
     skills: ['bash', 'docker', 'aws', 'linux'],
     desc: 'Hardened terminal environment for secure cloud-native deployment orchestrations and infrastructure scaling.',
     img: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800',
+  }
+];
+
+const JASMINE_PROJECTS: ProjectInfo[] = [
+  {
+    title: 'GitHub Analyzer',
+    skills: ['python', 'fastapi', 'react', 'graphql', 'redis', 'threejs'],
+    desc: 'A full-stack developer analytics platform featuring AI-driven contribution analysis and 3D commit history visualization.',
+    img: 'https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=800',
   },
   {
-    title: 'ATLAS SYNC',
-    skills: ['go', 'rust', 'redis', 'postgres'],
-    desc: 'Distributed database synchronization tool focusing on edge computing latency reduction and node consistency.',
-    img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800',
+    title: 'Veterinary Website',
+    skills: ['react', 'tailwind', 'spring', 'postgres', 'aws'],
+    desc: 'Clinic management system with JWT authentication, S3 storage, and automated notifications.',
+    img: 'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&q=80&w=800',
+  },
+  {
+    title: 'E-Commerce Platform',
+    skills: ['java', 'spring', 'react', 'hibernate', 'mysql'],
+    desc: 'Full-stack application with RESTful APIs, custom search features, and secure user verification.',
+    img: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=800',
   }
 ];
 
@@ -143,7 +158,10 @@ export default function App() {
         )}
 
         {activeTab === 'projects' && (
-          <InnovationLab projects={PROJECTS.slice(0, 3)} memberName={selectedMember} />
+          <InnovationLab 
+            projects={selectedMember === 'Jasmine Kaur' ? JASMINE_PROJECTS : PROJECTS} 
+            memberName={selectedMember} 
+          />
         )}
       </AnimatePresence>
     </div>
