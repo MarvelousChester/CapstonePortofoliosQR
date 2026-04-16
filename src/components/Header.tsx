@@ -6,7 +6,7 @@ export const Header = () => {
       <nav className="flex items-center justify-between w-full max-w-screen-2xl mx-auto">
         <Menu className="text-white/60 hover:text-white transition-colors cursor-pointer" size={24} />
         <h1 className="text-xl lg:text-2xl font-bold tracking-[2px] uppercase bg-gradient-to-r from-white to-[#AAA] bg-clip-text text-transparent">
-          THE COLLECTIVE
+          AUGI Team
         </h1>
         <Search className="text-white/60 hover:text-white transition-colors cursor-pointer" size={24} />
       </nav>

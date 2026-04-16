@@ -4,10 +4,8 @@ import { useState, useEffect } from 'react';
 import { TeamCard, TeamMember } from './components/TeamCard';
 import { ProjectCard, ProjectInfo } from './components/ProjectCard';
 import { Header } from './components/Header';
-import { Footer } from './components/Footer';
 import { Background } from './components/Background';
 import { Hero } from './components/Hero';
-import { FloatingNav } from './components/FloatingNav';
 import { InnovationLab } from './components/InnovationLab';
 
 const TEAM: TeamMember[] = [
@@ -140,13 +138,9 @@ export default function App() {
         )}
 
         {activeTab === 'projects' && (
-          <InnovationLab projects={PROJECTS} memberName={selectedMember} />
+          <InnovationLab projects={PROJECTS.slice(0, 3)} memberName={selectedMember} />
         )}
       </AnimatePresence>
-
-      <FloatingNav activeTab={activeTab} setActiveTab={(tab) => window.location.hash = tab} />
-
-      <Footer />
     </div>
   );
 }

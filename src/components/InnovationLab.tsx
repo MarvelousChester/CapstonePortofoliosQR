@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { ProjectCard, ProjectInfo } from './ProjectCard';
 import { Hero } from './Hero';
-import { CTASection } from './CTASection';
 
 interface InnovationLabProps {
   projects: ProjectInfo[];
@@ -24,7 +23,7 @@ export const InnovationLab = ({ projects, memberName }: InnovationLabProps) => {
         title={memberName ? (
           <>{memberName.split(' ')[0]} <br className="lg:hidden" /><span className="text-accent-blue font-medium">{memberName.split(' ')[1]}</span></>
         ) : (
-          <>Innovation <br className="lg:hidden" /><span className="text-accent-blue font-medium">Lab</span></>
+          <>AUGI <br className="lg:hidden" /><span className="text-accent-blue font-medium">TEAM</span></>
         )}
         description="A curated showcase of experimental prototypes, open-source utilities, and architectural blueprints developed by the collective."
       />
@@ -34,8 +33,6 @@ export const InnovationLab = ({ projects, memberName }: InnovationLabProps) => {
           <ProjectCard key={project.title} project={project} index={i} />
         ))}
       </div>
-
-      <CTASection />
     </motion.main>
   );
 };
