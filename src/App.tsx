@@ -90,6 +90,7 @@ const JASMINE_PROJECTS: ProjectInfo[] = [
 export default function App() {
   const [activeTab, setActiveTab] = useState<'team' | 'projects'>('team');
   const [selectedMember, setSelectedMember] = useState<string | null>(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   // Sync state with URL hash on load and when hash changes
   useEffect(() => {
@@ -109,12 +110,22 @@ export default function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  // Scroll to top on tab change
+  // Restore scroll position when returning to team tab
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [activeTab]);
+    if (activeTab === 'team') {
+      // Use a small timeout to ensure the DOM has updated
+      const timeoutId = setTimeout(() => {
+        window.scrollTo(0, scrollPosition);
+      }, 10);
+      return () => clearTimeout(timeoutId);
+    } else {
+      // If moving to projects, scroll to top
+      window.scrollTo(0, 0);
+    }
+  }, [activeTab, scrollPosition]);
 
   const navigateToProjects = (memberName: string) => {
+    setScrollPosition(window.scrollY);
     setSelectedMember(memberName);
     window.location.hash = 'projects';
   };
