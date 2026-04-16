@@ -115,16 +115,20 @@ export default function App() {
                       {member.desc}
                     </p>
                     
-                    <div className="flex items-center gap-3 pt-2 text-white/60">
-                      <a href="#" title="GitHub" className="hover:opacity-100 opacity-80 transition-all transform hover:-translate-y-1">
-                        <img src="https://skillicons.dev/icons?i=github" alt="GitHub" className="w-[36px] h-[36px]" />
+                    <div className="flex items-center flex-wrap gap-3 pt-2 text-white/60">
+                      <a href="#" title="GitHub" className="hover:opacity-100 opacity-80 transition-all transform hover:-translate-y-1 flex-shrink-0">
+                        <img src="https://skillicons.dev/icons?i=github" alt="GitHub" className="w-[36px] h-[36px] rounded-[10px]" />
                       </a>
-                      <a href="#" title="LinkedIn" className="hover:opacity-100 opacity-80 transition-all transform hover:-translate-y-1">
-                        <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" className="w-[36px] h-[36px]" />
+                      <a href="#" title="LinkedIn" className="hover:opacity-100 opacity-80 transition-all transform hover:-translate-y-1 flex-shrink-0">
+                        <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" className="w-[36px] h-[36px] rounded-[10px]" />
                       </a>
-                      <div className="w-[1px] h-5 bg-white/10 mx-1"></div>
-                      <a href="#" title="Personal Portfolio" className="w-[36px] h-[36px] flex items-center justify-center rounded-[10px] bg-white/5 hover:bg-white/15 border border-white/[0.12] hover:border-white/30 transition-all transform hover:-translate-y-1 text-white/80 hover:text-white">
-                        <Icon size={16} />
+                      <a href="#" title="Personal Portfolio" className="flex items-center gap-3 group hover:opacity-100 transition-all">
+                        <div className="w-[36px] h-[36px] flex items-center justify-center rounded-[10px] bg-white/5 group-hover:bg-white/15 border border-white/[0.12] group-hover:border-white/30 transition-all transform group-hover:-translate-y-1 text-white/80 group-hover:text-white flex-shrink-0">
+                          <Icon size={16} />
+                        </div>
+                        <span className="text-white/60 group-hover:text-white transition-colors text-[11px] uppercase tracking-[1px] font-medium whitespace-nowrap">
+                          Personal Portfolio
+                        </span>
                       </a>
                     </div>
                   </div>
