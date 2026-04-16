@@ -1,6 +1,6 @@
 import { Share2, Palette, Terminal, Users, Code, Cloud, Monitor, Reply, Layers, Sparkles, Shield, User, FileCode, Globe, RefreshCw, Target, Briefcase } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { TeamCard, TeamMember } from './components/TeamCard';
 import { ProjectCard, ProjectInfo } from './components/ProjectCard';
 import { Header } from './components/Header';
@@ -70,6 +70,11 @@ const PROJECTS: ProjectInfo[] = [
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'team' | 'projects'>('team');
+  const [selectedMember, setSelectedMember] = useState<string | null>(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [activeTab]);
 
   return (
     <div className="bg-background text-white font-sans min-h-screen relative overflow-hidden flex flex-col">
@@ -99,7 +104,10 @@ export default function App() {
                   key={member.name} 
                   member={member} 
                   index={i} 
-                  onShowProjects={() => setActiveTab('projects')}
+                  onShowProjects={() => {
+                    setSelectedMember(member.name);
+                    setActiveTab('projects');
+                  }}
                 />
               ))}
             </div>
@@ -107,7 +115,7 @@ export default function App() {
         )}
 
         {activeTab === 'projects' && (
-          <InnovationLab projects={PROJECTS} />
+          <InnovationLab projects={PROJECTS} memberName={selectedMember} />
         )}
       </AnimatePresence>
 
