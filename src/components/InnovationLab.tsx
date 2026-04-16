@@ -18,8 +18,6 @@ export const InnovationLab = ({ projects, memberName }: InnovationLabProps) => {
       className="flex-1 pt-12 pb-40 px-6 max-w-sm md:max-w-7xl mx-auto relative z-10 w-full"
     >
       <Hero 
-        label="ARCHIVE V.04"
-        labelClassName="text-accent-blue font-bold"
         title={memberName ? (
           <>{memberName.split(' ')[0]} <br className="lg:hidden" /><span className="text-accent-blue font-medium">{memberName.split(' ')[1]}</span></>
         ) : (

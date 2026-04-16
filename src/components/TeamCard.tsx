@@ -6,6 +6,9 @@ export interface TeamMember {
   role: string;
   desc: string;
   img: string;
+  github: string;
+  linkedin: string;
+  portfolio?: string;
 }
 
 interface TeamCardProps {
@@ -43,20 +46,22 @@ export function TeamCard({ member, index, onShowProjects }: TeamCardProps) {
           </p>
           
           <div className="flex items-center flex-wrap gap-3 pt-2 text-white/60">
-            <a href="#" title="GitHub" className="hover:opacity-100 opacity-80 transition-all transform hover:-translate-y-1 flex-shrink-0">
+            <a href={member.github} target="_blank" rel="noopener noreferrer" title="GitHub" className="hover:opacity-100 opacity-80 transition-all transform hover:-translate-y-1 flex-shrink-0">
               <img src="https://skillicons.dev/icons?i=github" alt="GitHub" className="w-[36px] h-[36px] rounded-[10px]" />
             </a>
-            <a href="#" title="LinkedIn" className="hover:opacity-100 opacity-80 transition-all transform hover:-translate-y-1 flex-shrink-0">
+            <a href={member.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn" className="hover:opacity-100 opacity-80 transition-all transform hover:-translate-y-1 flex-shrink-0">
               <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" className="w-[36px] h-[36px] rounded-[10px]" />
             </a>
-            <a href="#" title="Personal Portfolio" className="flex items-center gap-3 group hover:opacity-100 transition-all">
-              <div className="w-[36px] h-[36px] flex items-center justify-center rounded-[10px] bg-white/5 group-hover:bg-white/15 border border-white/[0.12] group-hover:border-white/30 transition-all transform group-hover:-translate-y-1 text-white/80 group-hover:text-white flex-shrink-0">
-                <Globe size={16} />
-              </div>
-              <span className="text-white/60 group-hover:text-white transition-colors text-[11px] uppercase tracking-[1px] font-medium whitespace-nowrap">
-                Personal Portfolio
-              </span>
-            </a>
+            {member.portfolio && (
+              <a href={member.portfolio} target="_blank" rel="noopener noreferrer" title="Personal Portfolio" className="flex items-center gap-3 group hover:opacity-100 transition-all">
+                <div className="w-[36px] h-[36px] flex items-center justify-center rounded-[10px] bg-white/5 group-hover:bg-white/15 border border-white/[0.12] group-hover:border-white/30 transition-all transform group-hover:-translate-y-1 text-white/80 group-hover:text-white flex-shrink-0">
+                  <Globe size={16} />
+                </div>
+                <span className="text-white/60 group-hover:text-white transition-colors text-[11px] uppercase tracking-[1px] font-medium whitespace-nowrap">
+                  Personal Portfolio
+                </span>
+              </a>
+            )}
           </div>
         </div>
         

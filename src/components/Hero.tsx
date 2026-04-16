@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { ReactNode } from 'react';
 
 interface HeroProps {
-  label: string;
+  label?: string;
   title: ReactNode;
   description: string;
   labelClassName?: string;
@@ -17,9 +17,11 @@ export const Hero = ({ label, title, description, labelClassName = "text-white/6
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative inline-block mb-4"
       >
-        <span className={`${labelClassName} tracking-[1px] text-[14px] uppercase block mb-4`}>
-          {label}
-        </span>
+        {label && (
+          <span className={`${labelClassName} tracking-[1px] text-[14px] uppercase block mb-4`}>
+            {label}
+          </span>
+        )}
         <h2 className="text-[52px] lg:text-[84px] font-[200] text-white leading-[1.1] my-[10px] tracking-tight">
           {title}
         </h2>

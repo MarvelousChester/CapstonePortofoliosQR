@@ -10,28 +10,38 @@ import { InnovationLab } from './components/InnovationLab';
 
 const TEAM: TeamMember[] = [
   {
-    name: 'ALEX RIVERA',
+    name: 'Karandeep Sandhu',
     role: 'Lead Architect & Strategy',
     desc: 'Pioneering spatial computing interfaces and distributed systems for the next generation of creative tools.',
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDEcaFdEaacBLwFM3QTdAZI4s3eMtw4oul9eRxArYmI0YwRHL1ZUYcAKUUUznsO3hYYUroFgg7V1v0y4DK0q4XossaPZ13m5XsrKGh8XjwsOIFfZ4IfVLmzWjwHDzh58W4AhgHYxStKsqQawCtQ_mTF5v2bx2kW6S2e26LTmMs7hjJOmqjOq9Zu5Zhq8AJlsnCvz0xC9TSdgbTZxKY8bBuoEi6k9jUMR5ncZnITuOoqQJG08pXJt2rfAL1iyQ0fhLfJxnqW0M1zyg',
+    img: '/Karandeep.png',
+    linkedin: 'https://www.linkedin.com/in/karandeep-sandhu/',
+    github: 'https://github.com/MarvelousChester',
   },
   {
-    name: 'MAYA CHEN',
+    name: 'Jasmine Kaur',
     role: 'Visual Experience Director',
     desc: 'Crafting immersive brand narratives through motion design and cinematic digital experiences.',
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDLO-4P3sl_kxtpzzoWyzQbGBmIOuorDUxU8YxFmyLsjCwfo-pwQdKskkSRY6xiOgxRNefnVHDdu6IXDv1LhQon4v4cSXrWyv3wnJvGA-lF5t5NSAqgykHbvUvNVoliv9ubktOEd9VBDoSxHm5FeaSowvMuXF8HNk6c1N8vTqRVrzlOpJow2RBXB1xfqEZklH9cELfFQ3akft1JY-88wzpU6yDDOY_nEezr4ehOvkjEFwaxscGRl9QHY4p0Xb4_qN8nG3c9lK_lpQ',
+    img: '/Jasmine.png',
+    linkedin: 'https://www.linkedin.com/in/jasminekaur1707/',
+    github: 'https://github.com/imjas-mine',
+    portfolio: 'https://jasminepersonalportfolio.vercel.app/',
   },
   {
-    name: 'JORDAN VANCE',
+    name: 'Andrei Haboc',
+
     role: 'Full-Stack Engineer',
     desc: 'Expert in scalable cloud infrastructures and high-performance real-time data visualization.',
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAUP0p3TjfHuZ40es03JivHvu8Wp6Q6C0yNoGpevtdeoMZLk2IjoCF6Nwq1O5njB6i1O5cX7TJ9sNY4of7ywSilqAzMYvHTYfAsI431svaLByOyARAFQZiog9-80U9jRpGRd66YfW-4XKrEehfza8h6Tu6A7lIBryYby7AJYy1mZSPVKNOzi-imLGpq4xcppVPpI8wsOoRaIceE4ZVpN7t--fhtUZGPJC-GmNnq0ByKRnDlDOAnBXqZxZQ-L0k21V14VQc7w07_Fw',
+    img: 'https://github.com/andreipogi2727.png',
+    linkedin: 'https://www.linkedin.com/in/andrei-haboc-7b8583291/',
+    github: 'https://github.com/andreipogi2727',
   },
   {
-    name: 'ELENA MORITZ',
+    name: 'Salman Nouman',
     role: 'Principal Product Lead',
     desc: 'Bridging human behavior and machine intelligence through elegant, intuitive interface design.',
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDit5wCjrhePtIRmA-68GrWUiWOwi0brd7A2-yqU8u7JvYud7PGWNAaJdsi0cYT3GKVyWEMsJdBHFYjVM9faHGw3QpsAYvIuIk0oaN3G0Cg5rQNGoRODDPhbrUJ401aEjC8JGIWHtAHRhPKyl-yP6rO2drvf69VuOWCt5wvHNAwKOcrE7uZfISSJiO74wD26j5ZXT08npZ9wZ0RGmkhCPdVTb6_xMLUtZG1an8wreB0x_RO1fGcpuFP14yOu0fEXzdAdeVyWx90gA',
+    img: 'https://github.com/SalmanNouman.png',
+    linkedin: 'https://www.linkedin.com/in/salmannouman/',
+    github: 'https://github.com/SalmanNouman',
   }
 ];
 
@@ -115,7 +125,6 @@ export default function App() {
             className="flex-1 pt-12 pb-40 px-6 max-w-sm md:max-w-7xl mx-auto relative z-10 w-full"
           >
             <Hero 
-              label="Our Visionaries"
               title={<>Team behind <br className="lg:hidden" />Augi</>}
               description="Your Fixing Companion"
             />
