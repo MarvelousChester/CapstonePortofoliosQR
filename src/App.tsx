@@ -72,9 +72,37 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<'team' | 'projects'>('team');
   const [selectedMember, setSelectedMember] = useState<string | null>(null);
 
+  // Sync state with URL hash on load and when hash changes
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash === 'projects') {
+        setActiveTab('projects');
+      } else {
+        setActiveTab('team');
+        setSelectedMember(null); // Clear selected member when going back to team
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    handleHashChange(); // Initial check
+
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  // Scroll to top on tab change
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [activeTab]);
+
+  const navigateToProjects = (memberName: string) => {
+    setSelectedMember(memberName);
+    window.location.hash = 'projects';
+  };
+
+  const navigateToTeam = () => {
+    window.location.hash = 'team';
+  };
 
   return (
     <div className="bg-background text-white font-sans min-h-screen relative overflow-hidden flex flex-col">
@@ -104,10 +132,7 @@ export default function App() {
                   key={member.name} 
                   member={member} 
                   index={i} 
-                  onShowProjects={() => {
-                    setSelectedMember(member.name);
-                    setActiveTab('projects');
-                  }}
+                  onShowProjects={() => navigateToProjects(member.name)}
                 />
               ))}
             </div>
@@ -119,7 +144,7 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <FloatingNav activeTab={activeTab} setActiveTab={setActiveTab} />
+      <FloatingNav activeTab={activeTab} setActiveTab={(tab) => window.location.hash = tab} />
 
       <Footer />
     </div>

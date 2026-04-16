@@ -65,7 +65,7 @@ export function TeamCard({ member, index, onShowProjects }: TeamCardProps) {
         
         <button 
           onClick={onShowProjects}
-          className="w-full mt-6 lg:mt-8 bg-white/[0.04] text-white/90 text-[13px] font-medium py-4 rounded-[16px] uppercase tracking-[1px] border border-white/[0.12] hover:bg-white/10 active:bg-white/5 transition-all outline-none"
+          className="w-full mt-6 lg:mt-8 bg-accent-blue text-white text-[13px] font-medium py-4 rounded-[16px] uppercase tracking-[1px] border border-transparent shadow-[0_0_15px_rgba(79,168,255,0.2)] hover:bg-accent-blue/90 hover:shadow-[0_0_20px_rgba(79,168,255,0.4)] active:scale-[0.98] transition-all outline-none"
         >
           Show Other Projects
         </button>
