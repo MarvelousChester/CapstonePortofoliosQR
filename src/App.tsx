@@ -48,7 +48,7 @@ const TEAM: TeamMember[] = [
 const PROJECTS: ProjectInfo[] = [
   {
     title: 'Bias-Meter-Prototype',
-    skills: ['js', 'nodejs', 'github', 'py', 'fastapi'],
+    skills: ['typescript', 'js', 'nodejs', 'github', 'py', 'fastapi'],
     desc: 'A browser extension and backend service designed to analyze YouTube video transcripts in real-time for potential bias, providing users with political and historical context.',
     img: 'https://github.com/MarvelousChester/Bias-Meter-Prototype/raw/main/imgs/RightBiasDetection.png',
   },
